@@ -1,0 +1,43 @@
+#
+# Ignore emacs backup files
+#
+*~
+\#*\#
+
+#
+# Ignore shell files
+#
+**/.profile
+**/.bashrc
+**/.cache
+**/.workloads
+**/.config
+.ideas
+.local
+.vscode
+
+#
+# Ignore python-related files
+#
+**/__pycache__
+**/.ipynb_checkpoints
+**/.ipython
+**/.jupyter
+**/.python_history
+
+#
+# Ignore application specific files
+#
+**/*.mp4
+**/profiles
+
+venv/
+
+#
+# Ignore generated files (unless adding manually)
+#
+
+workspace/*.yaml
+workspace/*.log
+workspace/*.csv
+workspace/*.xml
