@@ -26,9 +26,26 @@ class ConfigRegistry:
     EYERISS_ERT                     = EYERISS_OUTPUT_DIR / 'eyeriss.ERT.yaml'
     EYERISS_ART                     = EYERISS_OUTPUT_DIR / 'eyeriss.ART.yaml'
 
-    EYERISS_CONSTRAINTS_DIR = EYERISS_DIR / 'constraints'
-    EYERISS_ARCH_CONSTRAINTS = EYERISS_CONSTRAINTS_DIR / 'eyeriss_like_arch_constraints.yaml'
-    EYERISS_MAP_CONSTRAINTS  = EYERISS_CONSTRAINTS_DIR / 'eyeriss_like_map_constraints.yaml'
+    EYERISS_CONSTRAINTS_DIR         = EYERISS_DIR / 'constraints'
+    EYERISS_ARCH_CONSTRAINTS        = EYERISS_CONSTRAINTS_DIR / 'eyeriss_like_arch_constraints.yaml'
+    EYERISS_MAP_CONSTRAINTS         = EYERISS_CONSTRAINTS_DIR / 'eyeriss_like_map_constraints.yaml'
+    
+    
+    #################################
+    # PVC
+    #################################
+    PVC_DIR                         = Path('pvc')
+    PVC_ARCH                        = PVC_DIR / 'arch/pvc_like-float32.yaml'
+    PVC_COMPONENTS_DIR              = PVC_DIR / 'arch/components'
+    PVC_OUTPUT_DIR                  = PVC_DIR / 'output'
+    PVC_ERT                         = PVC_OUTPUT_DIR / 'pvc.ERT.yaml'
+    PVC_ART                         = PVC_OUTPUT_DIR / 'pvc.ART.yaml'
+
+    PVC_CONSTRAINTS_DIR             = PVC_DIR / 'constraints'
+    PVC_ARCH_CONSTRAINTS            = PVC_CONSTRAINTS_DIR / 'pvc_like_arch_constraints.yaml'
+    PVC_MAP_CONSTRAINTS             = PVC_CONSTRAINTS_DIR / 'pvc_like_map_constraints.yaml'
+    
+    
 
     #################################
     # System Manual
