@@ -11,10 +11,10 @@ mapspace_constraints:
       type: temporal
       permutation: QRSC PNM
       factors: Q=1 R=1 S=1 P=0
-    - target: glb_LBP
-      type: temporal
-      permutation: QRSC PNM
-      factors: Q=1 R=1 S=1 P=0
+#     - target: glb_LBP
+#       type: temporal
+#       permutation: QRSC PNM
+#       factors: Q=1 R=1 S=1 P=0
     # intuitive optimization to reduce map space size
     - target: DRAM
       type: temporal

@@ -20,20 +20,23 @@ architecture:
         - name: pvc
           local: 
             - name: glb_LBP
-              class: FIFO
+              class: SRAM
               attributes:
                 technology: 28nm
                 datawidth: 16
-                depth: 1024
+                depth: 2048
           subtree:
             - name: IPU[0..7]
+              attributes:
+                meshX: 8
+                meshY: 1
               local:
                 - name: LBP
-                  class: FIFO
+                  class: SRAM
                   attributes:
                     technology: 28nm
                     datawidth: 16
-                    depth: 1024
+                    depth: 2048
               subtree:
                 - name: group[0..31]
                   attributes:
@@ -43,11 +46,11 @@ architecture:
                    - name: group_spad
                      class: SRAM
                      attributes:
-                       depth: 8
+                       depth: 128
                        width: 16
                   subtree:
                     - name: PE[0..7]
-                      attributes: 
+                      attributes:
                         meshX: 4
                         meshY: 2
                       local: 
@@ -55,13 +58,9 @@ architecture:
                           class: intmac
                           attributes:
                             datawidth: 16
-                            meshX: 16
-                            meshY: 16
                         - name: storage
                           class: regfile
                           attributes:
                             width: 16
                             depth: 10
-                            meshX: 16
-                            meshY: 16
             
