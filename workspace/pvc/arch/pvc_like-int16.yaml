@@ -1,0 +1,67 @@
+architecture:
+  # ============================================================
+  # Architecture Description
+  # ============================================================
+  version: 0.3
+  subtree:
+    - name: system
+      attributes:
+        technology: 28nm
+        latency: 1ns
+      local:
+        - name: DRAM
+          class: DRAM
+          attributes:
+            type: LPDDR4
+            width: 64
+            block-size: 4
+            word-bits: 16
+      subtree:
+        - name: pvc
+          local: 
+            - name: glb_LBP
+              class: FIFO
+              attributes:
+                technology: 28nm
+                datawidth: 16
+                depth: 1024
+          subtree:
+            - name: IPU[0..7]
+              local:
+                - name: LBP
+                  class: FIFO
+                  attributes:
+                    technology: 28nm
+                    datawidth: 16
+                    depth: 1024
+              subtree:
+                - name: group[0..31]
+                  attributes:
+                    meshX: 4
+                    meshY: 8
+                  local:
+                   - name: group_spad
+                     class: SRAM
+                     attributes:
+                       depth: 8
+                       width: 16
+                  subtree:
+                    - name: PE[0..7]
+                      attributes: 
+                        meshX: 4
+                        meshY: 2
+                      local: 
+                        - name: mac
+                          class: intmac
+                          attributes:
+                            datawidth: 16
+                            meshX: 16
+                            meshY: 16
+                        - name: storage
+                          class: regfile
+                          attributes:
+                            width: 16
+                            depth: 10
+                            meshX: 16
+                            meshY: 16
+            

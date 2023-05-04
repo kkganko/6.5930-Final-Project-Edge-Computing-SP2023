@@ -20,7 +20,7 @@ class ConfigRegistry:
     # Eyeriss
     #################################
     EYERISS_DIR                     = Path('eyeriss')
-    EYERISS_ARCH                    = EYERISS_DIR / 'arch/eyeriss_like-float32.yaml'
+    EYERISS_ARCH                    = EYERISS_DIR / 'arch/eyeriss_like-int16.yaml'
     EYERISS_COMPONENTS_DIR          = EYERISS_DIR / 'arch/components'
     EYERISS_OUTPUT_DIR              = EYERISS_DIR / 'output'
     EYERISS_ERT                     = EYERISS_OUTPUT_DIR / 'eyeriss.ERT.yaml'
@@ -35,7 +35,7 @@ class ConfigRegistry:
     # PVC
     #################################
     PVC_DIR                         = Path('pvc')
-    PVC_ARCH                        = PVC_DIR / 'arch/pvc_like-float32.yaml'
+    PVC_ARCH                        = PVC_DIR / 'arch/pvc_like-int16.yaml'
     PVC_COMPONENTS_DIR              = PVC_DIR / 'arch/components'
     PVC_OUTPUT_DIR                  = PVC_DIR / 'output'
     PVC_ERT                         = PVC_OUTPUT_DIR / 'pvc.ERT.yaml'

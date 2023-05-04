@@ -1,0 +1,22 @@
+#
+# The following constraints are not limitations of the hardware architecture and dataflow,
+# but help limit the search space to speed up search
+#
+
+mapspace_constraints:
+  targets:
+    # intuitive optimization for row stationary
+    # -> process a row/col of the output before going to the next one
+    - target: LBP
+      type: temporal
+      permutation: QRSC PNM
+      factors: Q=1 R=1 S=1 P=0
+    - target: glb_LBP
+      type: temporal
+      permutation: QRSC PNM
+      factors: Q=1 R=1 S=1 P=0
+    # intuitive optimization to reduce map space size
+    - target: DRAM
+      type: temporal
+      permutation: RSP CMNQ
+      factors: R=1 S=1 P=1
