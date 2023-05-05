@@ -90,7 +90,19 @@ class ConfigRegistry:
     #################################
     # Models
     #################################
+    MODELS_DIR = Path('models')
     
+    SQUEEZE_NET_LAYERS = {}
+    for i in range(1, 27):
+        SQUEEZE_NET_LAYERS[i] = MODELS_DIR / f'squeezenet1_1/squeezenet1_1_layer{i}.yaml'
+        
+    MOBILE_NET_LAYERS = {}
+    for i in range(1, 54):
+        MOBILE_NET_LAYERS[i] = MODELS_DIR / f'mobilenet_v2/mobilenet_v2_layer{i}.yaml'
+        
+    DENSE_NET_LAYERS = {}
+    for i in range(1, 122):
+        DENSE_NET_LAYERS[i] = MODELS_DIR / f'densenet_121/densenet_121_layer{i}.yaml'
     
 
 def load_config(*paths):
