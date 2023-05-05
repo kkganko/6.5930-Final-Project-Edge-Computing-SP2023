@@ -45,7 +45,20 @@ class ConfigRegistry:
     PVC_ARCH_CONSTRAINTS            = PVC_CONSTRAINTS_DIR / 'pvc_like_arch_constraints.yaml'
     PVC_MAP_CONSTRAINTS             = PVC_CONSTRAINTS_DIR / 'pvc_like_map_constraints.yaml'
     
-    
+    #################################
+    # TETRIS
+    #################################
+    TETRIS_DIR                         = Path('tetris')
+    TETRIS_ARCH_DRAM_RED               = TETRIS_DIR / 'arch/tetris_single-vault_like-int16_wDramReduction.yaml'
+    TETRIS_ARCH_NO_DRAM_RED            = TETRIS_DIR / 'arch/tetris_single-vault_like-int16_woDramReduction.yaml'
+    TETRIS_COMPONENTS_DIR              = TETRIS_DIR / 'arch/components'
+    TETRIS_OUTPUT_DIR                  = TETRIS_DIR / 'output'
+    TETRIS_ERT                         = TETRIS_OUTPUT_DIR / 'tetris.ERT.yaml'
+    TETRIS_ART                         = TETRIS_OUTPUT_DIR / 'tetris.ART.yaml'
+
+    TETRIS_CONSTRAINTS_DIR             = TETRIS_DIR / 'constraints'
+    TETRIS_ARCH_CONSTRAINTS            = TETRIS_CONSTRAINTS_DIR / 'tetris_arch_constraints.yaml'
+    TETRIS_MAP_CONSTRAINTS             = TETRIS_CONSTRAINTS_DIR / 'tetris_map_constraints.yaml'
 
     #################################
     # System Manual
